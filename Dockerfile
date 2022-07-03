@@ -36,7 +36,7 @@ COPY requirements.txt /tmp/requirements.txt
 # RUN python${RUNTIME_VERSION} -m pip install -r requirements.txt --target ${FUNCTION_DIR}
 # Install Lambda Runtime Interface Client for Python
 #RUN python${RUNTIME_VERSION} -m pip install awslambdaric --target ${FUNCTION_DIR}
-RUN python${RUNTIME_VERSION} -m pip install -v -r /tmp/requirements.txt --target ${FUNCTION_DIR}
+RUN python${RUNTIME_VERSION} -m pip install -v --no-cache-dir -r /tmp/requirements.txt --target ${FUNCTION_DIR}
 
 # Stage 3 - final runtime image
 # Grab a fresh copy of the Python image

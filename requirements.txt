@@ -1,2 +1,3 @@
-awslambdaric
-Pillow
+awslambdaric==2.0.4
+Pillow==9.1.1
+#pyzbar==0.1.9
