@@ -1,5 +1,7 @@
-This project builds a minimal AWS Lambda image to scan barcodes from pictures.
+This project builds a small AWS Lambda image to scan barcodes from pictures. The Lambda is put behind an AWS HTTP API Gatewy.
 It uses SAM for building and testing.
+
+# Setup
 
 Run 
 ```
@@ -17,6 +19,11 @@ and it should return a JSON of the form
 {"code": "#########"}
 ```
 
+# Details
+
+The final Lambda image has a size of 73.3MB.
+
+# Pyzbar Modification
 Note that pyzbar was slightly modified. Specifically in zbar_library.py
 ```
 from ctypes.util import find_library
